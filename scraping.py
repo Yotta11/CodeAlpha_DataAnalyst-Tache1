@@ -13,7 +13,6 @@ HEADERS = {
 
 data = []
 
-
 def convert_rating(rating):
     ratings = {
         "One": 1,
@@ -131,7 +130,6 @@ def scrape_page(page_number):
 for page in range(1, 51):
     scrape_page(page)
     time.sleep(1)
-
 
 df = pd.DataFrame(data)
 
