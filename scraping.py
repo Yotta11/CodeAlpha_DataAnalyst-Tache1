@@ -11,7 +11,9 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0"
 }
 
+
 data = []
+
 
 def convert_rating(rating):
     ratings = {
@@ -22,7 +24,6 @@ def convert_rating(rating):
         "Five": 5
     }
     return ratings.get(rating)
-
 
 def scrape_page(page_number):
     url = CATALOGUE_URL.format(page_number)
