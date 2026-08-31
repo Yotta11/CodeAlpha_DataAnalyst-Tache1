@@ -27,9 +27,7 @@ def convert_rating(rating):
 
 def scrape_page(page_number):
     url = CATALOGUE_URL.format(page_number)
-
     print(f"Scraping de la page {page_number} : {url}")
-
     try:
         response = requests.get(
             url,
