@@ -50,11 +50,9 @@ def scrape_page(page_number):
             "article",
             class_="product_pod"
         )
-
         print(f"{len(books)} livres trouvés.")
 
         for book in books:
-
             title_tag = book.find("h3").find("a")
             title = title_tag.get("title", "").strip()
 
@@ -67,7 +65,6 @@ def scrape_page(page_number):
             )
 
             price = price_tag.get_text(strip=True)
-
             price = (
                 price
                 .replace("Â", "")
@@ -137,7 +134,6 @@ df = df.drop_duplicates()
 df = df.dropna(
     subset=["titre"]
 )
-
 df = df.reset_index(drop=True)
 
 print("\n========== INFORMATIONS ==========")
@@ -159,7 +155,6 @@ df.to_csv(
     index=False,
     encoding="utf-8-sig"
 )
-
 print("\n===================================")
 print("SCRAPING TERMINÉ")
 print("===================================")
