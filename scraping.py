@@ -128,9 +128,7 @@ for page in range(1, 51):
     time.sleep(1)
 
 df = pd.DataFrame(data)
-
 df = df.drop_duplicates()
-
 df = df.dropna(
     subset=["titre"]
 )
@@ -141,8 +139,10 @@ print("\n========== INFORMATIONS ==========")
 print(f"Nombre de lignes : {df.shape[0]}")
 print(f"Nombre de colonnes : {df.shape[1]}")
 
+
 print("\nColonnes :")
 print(df.columns.tolist())
+
 
 print("\nAperçu :")
 print(df.head())
